@@ -121,3 +121,5 @@ group by sexo,ciudad;
 |f | Cordoba | 85 |  59.8 |
 |f | La Falda | 280.5 | 280.5| 
 |m | Cordoba | (null ) |(null ) |
+
+####  OJO :  cuando se utiliza la funcion GROUP BY se debe agrupar por tantos campos se coloque al principio del select.
