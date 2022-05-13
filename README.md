@@ -1,0 +1,1 @@
+# GROUP-BY-en-Oracle-SQL-
