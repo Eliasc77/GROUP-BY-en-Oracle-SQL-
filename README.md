@@ -76,3 +76,48 @@ group by ciudad;
 |Rio Tercero | 0|
 |Cordoba | 1|
 |Carlos Paz| 0|
+
+#### nos mostrara los registros de telefonos agrupados x ciudad.
+___
+
+```sql
+select sexo, sum(montocompra) as "total comprado " from visitantes
+group by sexo;
+```
+|sexo | total comprado | 
+|:------| ---------:|
+|(null) | 321.5|
+|f | 449.2|
+|m | 245.9|
+
+#### se muestra los montos comprados segun el sexo, se mostrara null ya que en el campo null existen registros de monto de compra.
+
+>si no queremos que se muestre el null utilizamo la clausula  IS NOT NULL
+
+```SQL
+select sexo, sum(montocompra) as "total comprado "
+from visitantes
+where sexo is not null
+group by sexo;
+```
+|sexo | total comprado | 
+|:------| ---------:|
+|f | 449.2|
+|m | 245.9|
+
+____
+#### con group by tambien funciona agrupando varios campos
+```sql
+select sexo,  ciudad, max(montocompra) as "Mayor", min(montocompra) as "Menor"
+from visitantes
+group by sexo,ciudad;
+```
+
+|sexo | ciudad | Mayor | Menor |
+|:------|---------:| ---------:| ---------:|
+|m | Carlos Paz|  150.5 |  95.4 |
+|f | Carlos Paz| 23.9 | 23.9|
+|(null) | Rio Tercero| 321.5 | 321.5 |
+|f | Cordoba | 85 |  59.8 |
+|f | La Falda | 280.5 | 280.5| 
+|m | Cordoba | (null ) |(null ) |
