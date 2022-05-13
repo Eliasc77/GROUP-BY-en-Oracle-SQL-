@@ -47,4 +47,17 @@
  | Liliana Torres | 40 |  f  | Sarmiento 876 | cordoba | (null)| no tiene|  85  |
  | Gabriela Duarte | 21 |  (null) | (null) | Rio Tercero | (null)| gabrielaltorres@hotmail.com|  321.50  |
 
+___
  
+ ```sql
+select ciudad, count(*)
+from visitantes
+group by ciudad;
+```
+
+|CIUDAD | COUNT(**) | 
+|:------| ---------:|
+|La falda | 1|
+|Rio Tercero | 1|
+|Cordoba | 3|
+|Carlos Paz| 3|
