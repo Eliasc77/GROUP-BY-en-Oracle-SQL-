@@ -61,3 +61,18 @@ group by ciudad;
 |Rio Tercero | 1|
 |Cordoba | 3|
 |Carlos Paz| 3|
+
+#### nos mostrara cuantos registros fueron insertados en el campo ciudad y agrupados por ciudad
+
+ ```sql
+select ciudad, count(telefono) as "numero de telefonos"
+from visitantes
+group by ciudad;
+```
+
+|CIUDAD | numero de telefonos | 
+|:------| ---------:|
+|La falda | 0|
+|Rio Tercero | 0|
+|Cordoba | 1|
+|Carlos Paz| 0|
